@@ -1,0 +1,324 @@
+/* 彩虹渐变动画背景 */
+body {
+    margin: 0;
+    font-family: '微软雅黑', Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695, #ffe29f, #ff6ec4);
+    background-size: 1200% 1200%;
+    animation: rainbowBG 20s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes rainbowBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* 气泡动画 */
+.bubble-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: bubbleUp 8s linear infinite;
+}
+
+@keyframes bubbleUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-110vh);}
+}
+
+/* 其他样式保持不变，hero区块等... */
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 2;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    padding: 0;
+}
+
+.navbar > li {
+    position: relative;
+    margin-left: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 16px 12px;
+    display: block;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.navbar a:hover {
+    background: #cce6ff;
+    border-radius: 4px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: #fff;
+    min-width: 120px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 16px;
+    font-size: 15px;
+    color: #0077cc;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    background: rgba(255,255,255,0.7);
+    padding: 40px 60px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    z-index: 1;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: #0077cc;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #444;
+}
+
+/* 卡片式作品展示样式 */
+body {
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695, #ffe29f, #ff6ec4);
+    background-size: 1200% 1200%;
+    animation: rainbowBG 20s ease infinite;
+    font-family: '微软雅黑', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+@keyframes rainbowBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    padding: 0;
+}
+
+.navbar > li {
+    position: relative;
+    margin-left: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 16px 12px;
+    display: block;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.projects h2 {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 24px 18px 18px 18px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+
+.card-bg {
+    background: #fff url('https://png.pngtree.com/png-clipart/20230120/original/pngtree-white-background-png-image_8926617.png') center/cover no-repeat;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.card-img:hover {
+    transform: scale(1.07);
+}
+
+.card-title {
+    color: #1b64bd;
+    font-size: 22px;
+    margin: 10px 0 8px 0;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.card-title:hover {
+    color: #ff6ec4;
+}
+
+.card-desc {
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* 个人简介视差与渐显动画 */
+.profile-parallax {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #ff6ec4 0%, #7873f5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-content {
+    background: rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 48px 36px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    text-align: center;
+    max-width: 600px;
+}
+
+.profile-content h2,
+.profile-content p {
+    color: #c50fc5;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1s;
+}
+
+.profile-content h2.visible,
+.profile-content p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-content h2 {
+    font-size: 36px;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+.profile-content p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+/* 响应式布局 */
+@media (max-width: 1100px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        width: 90vw;
+    }
+    .profile-content {
+        padding: 24px 10px;
+    }
+    .profile-content h2 {
+        font-size: 28px;
+    }
+    .profile-content p {
+        font-size: 16px;
+    }
+}
